@@ -149,7 +149,7 @@
     /*---------- 04. Sticky fix ----------*/
     $(window).on("scroll", function () {
         var topPos = $(this).scrollTop();
-        sticky()
+        
         if (topPos > 150) {
             $('.sticky-wrapper').addClass('will-sticky')
             sticky()
@@ -170,6 +170,7 @@
     if ($('.scroll-top').length > 0) {
 
         var scrollTopbtn = document.querySelector('.scroll-top');
+        var whatsappbtn = document.querySelector('.wa-btn');
         var progressPath = document.querySelector('.scroll-top path');
         var pathLength = progressPath.getTotalLength();
         progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
@@ -190,8 +191,10 @@
         jQuery(window).on('scroll', function () {
             if (jQuery(this).scrollTop() > offset) {
                 jQuery(scrollTopbtn).addClass('show');
+                jQuery(whatsappbtn).addClass('show');
             } else {
                 jQuery(scrollTopbtn).removeClass('show');
+                jQuery(whatsappbtn).removeClass('show');
             }
         });
         jQuery(scrollTopbtn).on('click', function (event) {
