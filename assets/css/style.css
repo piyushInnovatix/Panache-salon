@@ -2134,7 +2134,7 @@ textarea.is-invalid {
 .wa-btn {
   position: fixed;
   right: 30px;
-  bottom: 100px;
+  bottom: 140px;
   height: 50px;
   width: 50px;
   cursor: pointer;
@@ -2142,7 +2142,7 @@ textarea.is-invalid {
   border-radius: 50px;
   z-index: 10000;
   opacity: 1;
-  visibility: hidden;
+  visibility: visible;
   -webkit-transform: translateY(45px);
   -ms-transform: translateY(45px);
   transform: translateY(45px);
@@ -2166,16 +2166,6 @@ textarea.is-invalid {
   border: 2px solid var(--theme-color);
   box-shadow: none;
   border-radius: 50%;
-}
-
-.wa-btn svg {
-  color: var(--theme-color);
-  border-radius: 50%;
-  background: var(--white-color);
-}
-
-.wa-btn svg path {
-  fill: none;
 }
 
 .wa-btn .progress-circle path {
@@ -3368,8 +3358,8 @@ a.text-theme:hover,
 }
 
 .zoom {
-  -webkit-animation: zoom 8.67s linear infinite;
-  animation: zoom 8.67s linear infinite;
+  -webkit-animation: zoom 26s linear infinite;
+  animation: zoom 26s linear infinite;
 }
 
 @-webkit-keyframes zoom {
@@ -6556,6 +6546,12 @@ ol.wp-block-rss {
   transition: all 0.4s;
 }
 
+.header-social a img{
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+
 .header-layout1 .header-social a:hover {
   color: var(--theme-color);
 }
@@ -7085,7 +7081,7 @@ ol.wp-block-rss {
   height: var(--icon-size, 46px);
   line-height: var(--icon-size, 48px);
   background-color: transparent;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   color: white;
   font-size: 18px;
   text-align: center;
@@ -7095,11 +7091,11 @@ ol.wp-block-rss {
   transition: all 0.4s;
 }
 
-.header-layout3 .social-links.header-social a:hover {
+/* .header-layout3 .social-links.header-social a:hover {
   background-color: var(--theme-color);
   color: var(--white-color);
   border-color: var(--theme-color);
-}
+} */
 
 .header-layout3 .sticky-wrapper {
   background-color: var(--title-color);
@@ -17009,6 +17005,10 @@ span.select2-selection.select2-selection--single:focus {
 .testi-card_wrapper .star-icon a {
   font-size: 12px;
   opacity: 1;
+}
+
+.star-icon a i {
+  color: rgb(255, 187, 0);
 }
 
 .testi-card_profile {
