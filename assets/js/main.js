@@ -264,7 +264,7 @@
             slidesToShow: d("slide-show") ? d("slide-show") : 1,
             adaptiveHeight: d("adaptive-height") ? true : false,
             centerMode: d("center-mode") ? true : false,
-            autoplaySpeed: d("autoplay-speed") ? d("autoplay-speed") : 8000,
+            autoplaySpeed: d("autoplay-speed") ? d("autoplay-speed") : 1000,
             centerPadding: d("center-padding") ? d("center-padding") : "0",
             focusOnSelect: d("focuson-select") == false ? false : true,
             pauseOnFocus: d("pauseon-focus") ? true : false,
