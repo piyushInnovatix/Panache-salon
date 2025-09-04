@@ -61,16 +61,16 @@
     /*---------- 03. Mobile Menu Active ----------*/
     $.fn.asmobilemenu = function (options) {
         var opt = $.extend({
-                menuToggleBtn: ".th-menu-toggle",
-                bodyToggleClass: "th-body-visible",
-                subMenuClass: "th-submenu",
-                subMenuParent: "th-item-hth-children",
-                subMenuParentToggle: "th-active",
-                meanExpandClass: "th-mean-expand",
-                appendElement: '<span class="th-mean-expand"></span>',
-                subMenuToggleClass: "th-open",
-                toggleSpeed: 400,
-            },
+            menuToggleBtn: ".th-menu-toggle",
+            bodyToggleClass: "th-body-visible",
+            subMenuClass: "th-submenu",
+            subMenuParent: "th-item-hth-children",
+            subMenuParentToggle: "th-active",
+            meanExpandClass: "th-mean-expand",
+            appendElement: '<span class="th-mean-expand"></span>',
+            subMenuToggleClass: "th-open",
+            toggleSpeed: 400,
+        },
             options
         );
 
@@ -149,7 +149,7 @@
     /*---------- 04. Sticky fix ----------*/
     $(window).on("scroll", function () {
         var topPos = $(this).scrollTop();
-        
+
         if (topPos > 150) {
             $('.sticky-wrapper').addClass('will-sticky')
             sticky()
@@ -227,9 +227,9 @@
             d("prev-arrow") +
             '"></i></button>',
             nextButton =
-            '<button type="button" class="slick-next"><i class="' +
-            d("next-arrow") +
-            '"></i></button>';
+                '<button type="button" class="slick-next"><i class="' +
+                d("next-arrow") +
+                '"></i></button>';
 
         // Function For Custom Arrow Btn
         $("[data-slick-next]").each(function () {
@@ -264,7 +264,7 @@
             slidesToShow: d("slide-show") ? d("slide-show") : 1,
             adaptiveHeight: d("adaptive-height") ? true : false,
             centerMode: d("center-mode") ? true : false,
-            autoplaySpeed: d("autoplay-speed") ? d("autoplay-speed") : 1000,
+            autoplaySpeed: d("autoplay-speed") ? d("autoplay-speed") : 8000,
             centerPadding: d("center-padding") ? d("center-padding") : "0",
             focusOnSelect: d("focuson-select") == false ? false : true,
             pauseOnFocus: d("pauseon-focus") ? true : false,
@@ -278,75 +278,75 @@
                 nextButton : '<button type="button" class="slick-next"><i class="far fa-arrow-right"></i></button>',
             rtl: $("html").attr("dir") == "rtl" ? true : false,
             responsive: [{
-                    breakpoint: 1600,
-                    settings: {
-                        arrows: d("xl-arrows") ? true : false,
-                        dots: d("xl-dots") ? true : false,
-                        slidesToShow: d("xl-slide-show") ?
-                            d("xl-slide-show") : d("slide-show"),
-                        centerMode: d("xl-center-mode") ? true : false,
-                        centerPadding: "0",
-                    },
+                breakpoint: 1600,
+                settings: {
+                    arrows: d("xl-arrows") ? true : false,
+                    dots: d("xl-dots") ? true : false,
+                    slidesToShow: d("xl-slide-show") ?
+                        d("xl-slide-show") : d("slide-show"),
+                    centerMode: d("xl-center-mode") ? true : false,
+                    centerPadding: "0",
                 },
-                {
-                    breakpoint: 1400,
-                    settings: {
-                        arrows: d("ml-arrows") ? true : false,
-                        dots: d("ml-dots") ? true : false,
-                        slidesToShow: d("ml-slide-show") ?
-                            d("ml-slide-show") : d("slide-show"),
-                        centerMode: d("ml-center-mode") ? true : false,
-                        centerPadding: 0,
-                    },
+            },
+            {
+                breakpoint: 1400,
+                settings: {
+                    arrows: d("ml-arrows") ? true : false,
+                    dots: d("ml-dots") ? true : false,
+                    slidesToShow: d("ml-slide-show") ?
+                        d("ml-slide-show") : d("slide-show"),
+                    centerMode: d("ml-center-mode") ? true : false,
+                    centerPadding: 0,
                 },
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        arrows: d("lg-arrows") ? true : false,
-                        dots: d("lg-dots") ? true : false,
-                        slidesToShow: d("lg-slide-show") ?
-                            d("lg-slide-show") : d("slide-show"),
-                        centerMode: d("lg-center-mode") ?
-                            d("lg-center-mode") : false,
-                        centerPadding: 0,
-                    },
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    arrows: d("lg-arrows") ? true : false,
+                    dots: d("lg-dots") ? true : false,
+                    slidesToShow: d("lg-slide-show") ?
+                        d("lg-slide-show") : d("slide-show"),
+                    centerMode: d("lg-center-mode") ?
+                        d("lg-center-mode") : false,
+                    centerPadding: 0,
                 },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        arrows: d("md-arrows") ? true : false,
-                        dots: d("md-dots") ? true : false,
-                        slidesToShow: d("md-slide-show") ?
-                            d("md-slide-show") : 1,
-                        centerMode: d("md-center-mode") ?
-                            d("md-center-mode") : false,
-                        centerPadding: 0,
-                    },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    arrows: d("md-arrows") ? true : false,
+                    dots: d("md-dots") ? true : false,
+                    slidesToShow: d("md-slide-show") ?
+                        d("md-slide-show") : 1,
+                    centerMode: d("md-center-mode") ?
+                        d("md-center-mode") : false,
+                    centerPadding: 0,
                 },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: d("sm-arrows") ? true : false,
-                        dots: d("sm-dots") ? true : false,
-                        slidesToShow: d("sm-slide-show") ?
-                            d("sm-slide-show") : 1,
-                        centerMode: d("sm-center-mode") ?
-                            d("sm-center-mode") : false,
-                        centerPadding: 0,
-                    },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: d("sm-arrows") ? true : false,
+                    dots: d("sm-dots") ? true : false,
+                    slidesToShow: d("sm-slide-show") ?
+                        d("sm-slide-show") : 1,
+                    centerMode: d("sm-center-mode") ?
+                        d("sm-center-mode") : false,
+                    centerPadding: 0,
                 },
-                {
-                    breakpoint: 576,
-                    settings: {
-                        arrows: d("xs-arrows") ? true : false,
-                        dots: d("xs-dots") ? true : false,
-                        slidesToShow: d("xs-slide-show") ?
-                            d("xs-slide-show") : 1,
-                        centerMode: d("xs-center-mode") ?
-                            d("xs-center-mode") : false,
-                        centerPadding: 0,
-                    },
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    arrows: d("xs-arrows") ? true : false,
+                    dots: d("xs-dots") ? true : false,
+                    slidesToShow: d("xs-slide-show") ?
+                        d("xs-slide-show") : 1,
+                    centerMode: d("xs-center-mode") ?
+                        d("xs-center-mode") : false,
+                    centerPadding: 0,
                 },
+            },
                 // You can unslick at a given breakpoint now by adding:
                 // settings: "unslick"
                 // instead of a settings object
@@ -555,8 +555,8 @@
         if (
             !$($email).val() ||
             !$($email)
-            .val()
-            .match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)
+                .val()
+                .match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)
         ) {
             $($email).addClass(invalidCls);
             valid = false;
@@ -625,29 +625,29 @@
     };
     popupSideMenu('.sidemenu-wrapper', '.sideMenuToggler', '.sideMenuCls', 'show');
 
-     /*---------- 12. Popup Sidemenu ----------*/
- function popupSideMenu($sideMenu2, $sideMunuOpen2, $sideMenuCls2, $toggleCls2) {
-    // Sidebar Popup
-    $($sideMunuOpen2).on('click', function (e) {
-        e.preventDefault();
-        $($sideMenu2).addClass($toggleCls2);
-    });
-    $($sideMenu2).on('click', function (e) {
-        e.stopPropagation();
-        $($sideMenu2).removeClass($toggleCls2)
-    });
-    var sideMenuChild = $sideMenu2 + ' > div';
-    $(sideMenuChild).on('click', function (e) {
-        e.stopPropagation();
-        $($sideMenu2).addClass($toggleCls2)
-    });
-    $($sideMenuCls2).on('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $($sideMenu2).removeClass($toggleCls2);
-    });
-};
-popupSideMenu('.shopping-cart', '.sideMenuToggler2', '.sideMenuCls', 'show');
+    /*---------- 12. Popup Sidemenu ----------*/
+    function popupSideMenu($sideMenu2, $sideMunuOpen2, $sideMenuCls2, $toggleCls2) {
+        // Sidebar Popup
+        $($sideMunuOpen2).on('click', function (e) {
+            e.preventDefault();
+            $($sideMenu2).addClass($toggleCls2);
+        });
+        $($sideMenu2).on('click', function (e) {
+            e.stopPropagation();
+            $($sideMenu2).removeClass($toggleCls2)
+        });
+        var sideMenuChild = $sideMenu2 + ' > div';
+        $(sideMenuChild).on('click', function (e) {
+            e.stopPropagation();
+            $($sideMenu2).addClass($toggleCls2)
+        });
+        $($sideMenuCls2).on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $($sideMenu2).removeClass($toggleCls2);
+        });
+    };
+    popupSideMenu('.shopping-cart', '.sideMenuToggler2', '.sideMenuCls', 'show');
 
 
 
@@ -676,68 +676,68 @@ popupSideMenu('.shopping-cart', '.sideMenuToggler2', '.sideMenuCls', 'show');
         $(".slick-slider").slick("refresh");
     });
 
-      /*----------- 09. tilt ----------*/
-      $('.tilt-active').tilt({
+    /*----------- 09. tilt ----------*/
+    $('.tilt-active').tilt({
         maxTilt: 7,
-        perspective: 1000,   
+        perspective: 1000,
     })
 
 
-       /************lettering js***********/
-       function injector(t, splitter, klass, after) {
-		var a = t.text().split(splitter), inject = '';
-		if (a.length) {
-			$(a).each(function(i, item) {
-				inject += '<span class="'+klass+(i+1)+'">'+item+'</span>'+after;
-			});	
-			t.empty().append(inject);
-		}
-	}
-	
-	var methods = {
-		init : function() {
+    /************lettering js***********/
+    function injector(t, splitter, klass, after) {
+        var a = t.text().split(splitter), inject = '';
+        if (a.length) {
+            $(a).each(function (i, item) {
+                inject += '<span class="' + klass + (i + 1) + '">' + item + '</span>' + after;
+            });
+            t.empty().append(inject);
+        }
+    }
 
-			return this.each(function() {
-				injector($(this), '', 'char', '');
-			});
+    var methods = {
+        init: function () {
 
-		},
+            return this.each(function () {
+                injector($(this), '', 'char', '');
+            });
 
-		words : function() {
+        },
 
-			return this.each(function() {
-				injector($(this), ' ', 'word', ' ');
-			});
+        words: function () {
 
-		},
-		
-		lines : function() {
+            return this.each(function () {
+                injector($(this), ' ', 'word', ' ');
+            });
 
-			return this.each(function() {
-				var r = "eefec303079ad17405c889e092e105b0";
-				// Because it's hard to split a <br/> tag consistently across browsers,
-				// (*ahem* IE *ahem*), we replaces all <br/> instances with an md5 hash 
-				// (of the word "split").  If you're trying to use this plugin on that 
-				// md5 hash string, it will fail because you're being ridiculous.
-				injector($(this).children("br").replaceWith(r).end(), r, 'line', '');
-			});
+        },
 
-		}
-	};
+        lines: function () {
 
-    $.fn.lettering = function( method ) {
-		// Method calling logic
-		if ( method && methods[method] ) {
-			return methods[ method ].apply( this, [].slice.call( arguments, 1 ));
-		} else if ( method === 'letters' || ! method ) {
-			return methods.init.apply( this, [].slice.call( arguments, 0 ) ); // always pass an array
-		}
-		$.error( 'Method ' +  method + ' does not exist on jQuery.lettering' );
-		return this;
-	};
+            return this.each(function () {
+                var r = "eefec303079ad17405c889e092e105b0";
+                // Because it's hard to split a <br/> tag consistently across browsers,
+                // (*ahem* IE *ahem*), we replaces all <br/> instances with an md5 hash 
+                // (of the word "split").  If you're trying to use this plugin on that 
+                // md5 hash string, it will fail because you're being ridiculous.
+                injector($(this).children("br").replaceWith(r).end(), r, 'line', '');
+            });
 
-    $(".about-anime").lettering();       
-    /*---------- 14. Section Position ----------*/  
+        }
+    };
+
+    $.fn.lettering = function (method) {
+        // Method calling logic
+        if (method && methods[method]) {
+            return methods[method].apply(this, [].slice.call(arguments, 1));
+        } else if (method === 'letters' || !method) {
+            return methods.init.apply(this, [].slice.call(arguments, 0)); // always pass an array
+        }
+        $.error('Method ' + method + ' does not exist on jQuery.lettering');
+        return this;
+    };
+
+    $(".about-anime").lettering();
+    /*---------- 14. Section Position ----------*/
     // Interger Converter
     function convertInteger(str) {
         return parseInt(str, 10);
@@ -859,26 +859,26 @@ popupSideMenu('.shopping-cart', '.sideMenuToggler2', '.sideMenuCls', 'show');
             };
         });
     }
-   
-         /*----------- 14. Date Time Picker ----------*/
-  // Only Date Picker
-  $('.date-pick').datetimepicker({ 
-    timepicker: false,
-    datepicker: true,
-    format: 'd-m-y',
-    step: 10
-  });
 
-  // Only Time Picker
-  $('.time-pick').datetimepicker({
-    datepicker:false,
-    format:'H:i',
-    step:30
-  });
+    /*----------- 14. Date Time Picker ----------*/
+    // Only Date Picker
+    $('.date-pick').datetimepicker({
+        timepicker: false,
+        datepicker: true,
+        format: 'd-m-y',
+        step: 10
+    });
+
+    // Only Time Picker
+    $('.time-pick').datetimepicker({
+        datepicker: false,
+        format: 'H:i',
+        step: 30
+    });
 
     /* ==================================================
-			# Wow Init
-		 ===============================================*/
+            # Wow Init
+         ===============================================*/
     var wow = new WOW({
         boxClass: 'wow',
         animateClass: 'animated',
@@ -888,204 +888,204 @@ popupSideMenu('.shopping-cart', '.sideMenuToggler2', '.sideMenuCls', 'show');
     });
     new WOW().init();
 
-        /*---------- 16. AS Tab ----------*/
-        $.fn.asTab = function (options) {
-            var opt = $.extend(
-                {
-                    sliderTab: false,
-                    tabButton: "button",
-                },
-                options
-            );
-    
-            $(this).each(function () {
-                var $menu = $(this);
-                var $button = $menu.find(opt.tabButton);
-    
-                // Append indicator
-                $menu.append('<span class="indicator"></span>');
-                var $line = $menu.find(".indicator");
-    
-                // On Click Button Class Remove and indecator postion set
-                $button.on("click", function (e) {
-                    e.preventDefault();
-                    var cBtn = $(this);
-                    cBtn.addClass("active").siblings().removeClass("active");
-                    if (opt.sliderTab) {
-                        $(slider).slick("slickGoTo", cBtn.data("slide-go-to"));
-                    } else {
-                        linePos();
-                    }
-                });
-    
-                // Work With slider
-                if (opt.sliderTab) {
-                    var slider = $menu.data("asnavfor"); // select slider
-    
-                    // Select All button and set attribute
-                    var i = 0;
-                    $button.each(function () {
-                        var slideBtn = $(this);
-                        slideBtn.attr("data-slide-go-to", i);
-                        i++;
-    
-                        // Active Slide On load > Actived Button
-                        if (slideBtn.hasClass("active")) {
-                            $(slider).slick(
-                                "slickGoTo",
-                                slideBtn.data("slide-go-to")
-                            );
-                        }
-    
-                        // Change Indicator On slide Change
-                        $(slider).on(
-                            "beforeChange",
-                            function (event, slick, currentSlide, nextSlide) {
-                                $menu
-                                    .find(
-                                        opt.tabButton +
-                                            '[data-slide-go-to="' +
-                                            nextSlide +
-                                            '"]'
-                                    )
-                                    .addClass("active")
-                                    .siblings()
-                                    .removeClass("active");
-                                linePos();
-                            }
-                        );
-                    });
-                }
-    
-                // Indicator Position
-                function linePos() {
-                    var $btnActive = $menu.find(opt.tabButton + ".active"),
-                        $height = $btnActive.css("height"),
-                        $width = $btnActive.css("width"),
-                        $top = $btnActive.position().top + "px",
-                        $left = $btnActive.position().left + "px";
-    
-                    $line.get(0).style.setProperty("--height-set", $height);
-                    $line.get(0).style.setProperty("--width-set", $width);
-                    $line.get(0).style.setProperty("--pos-y", $top);
-                    $line.get(0).style.setProperty("--pos-x", $left);
-    
-                    if (
-                        $($button).first().position().left ==
-                        $btnActive.position().left
-                    ) {
-                        $line
-                            .addClass("start")
-                            .removeClass("center")
-                            .removeClass("end");
-                    } else if (
-                        $($button).last().position().left ==
-                        $btnActive.position().left
-                    ) {
-                        $line
-                            .addClass("end")
-                            .removeClass("center")
-                            .removeClass("start");
-                    } else {
-                        $line
-                            .addClass("center")
-                            .removeClass("start")
-                            .removeClass("end");
-                    }
-                }
-                linePos();
-            });
-        };
-
-        
-    
-        // Call On Load
-        if ($('.testi-box-tab').length) { 
-            $('.testi-box-tab').asTab({
-              sliderTab: true,
-              tabButton: '.tab-btn'
-            });
-          }  
-
-        
-
-
-        if ($(".hero-indicator").length) { 
-            $(".hero-indicator").asTab({
-                sliderTab: true,
-                tabButton: ".indicatior-btn", 
-            });
-        }
-            if ($(".hero-indicator3").length) {
-            $(".hero-indicator3").asTab({
-                sliderTab: true,
-                tabButton: ".indicatior-btn", 
-            });
-        }
-
-     
-        ($.fn.vsTab = function (t) {
-            var a = $.extend({
-                sliderTab: !1,
+    /*---------- 16. AS Tab ----------*/
+    $.fn.asTab = function (options) {
+        var opt = $.extend(
+            {
+                sliderTab: false,
                 tabButton: "button",
-                indicator: !1
-            }, t);
-            $(this).each(function () {
-                var t = $(this),
-                    s = t.find(a.tabButton);
-                if (
-                    (s.on("click", function (t) {
-                            t.preventDefault();
-                            var s = $(this);
-                            s.addClass("active").siblings().removeClass("active"), a.sliderTab && $(o).slick("slickGoTo", s.data("slide-go-to"));
-                        }),
-                        a.sliderTab)
-                ) {
-                    var o = t.data("asnavfor"),
-                        n = 0;
-                    s.each(function () {
-                        var s = $(this);
-                        s.attr("data-slide-go-to", n),
-                            n++,
-                            s.hasClass("active") && $(o).slick("slickGoTo", s.data("slide-go-to")),
-                            $(o).on("beforeChange", function (e, s, o, n) {
-                                t.find(a.tabButton + '[data-slide-go-to="' + n + '"]')
-                                    .addClass("active")
-                                    .siblings()
-                                    .removeClass("active");
-                            });
-                    });
+            },
+            options
+        );
+
+        $(this).each(function () {
+            var $menu = $(this);
+            var $button = $menu.find(opt.tabButton);
+
+            // Append indicator
+            $menu.append('<span class="indicator"></span>');
+            var $line = $menu.find(".indicator");
+
+            // On Click Button Class Remove and indecator postion set
+            $button.on("click", function (e) {
+                e.preventDefault();
+                var cBtn = $(this);
+                cBtn.addClass("active").siblings().removeClass("active");
+                if (opt.sliderTab) {
+                    $(slider).slick("slickGoTo", cBtn.data("slide-go-to"));
+                } else {
+                    linePos();
                 }
             });
-        }),
-        $(".th-custom-dots").length && $(".th-custom-dots").vsTab({  
-                sliderTab: !0,
-                tabButton: ".dot-btn"
-            }),
-    /*----------- 18. Shape Mockup ----------*/
-    $.fn.shapeMockup = function () {
-        var $shape = $(this);
-        $shape.each(function () {
-            var $currentShape = $(this),
-                shapeTop = $currentShape.data("top"),
-                shapeRight = $currentShape.data("right"),
-                shapeBottom = $currentShape.data("bottom"),
-                shapeLeft = $currentShape.data("left");
-            $currentShape
-                .css({
-                    top: shapeTop,
-                    right: shapeRight,
-                    bottom: shapeBottom,
-                    left: shapeLeft,
-                })
-                .removeAttr("data-top")
-                .removeAttr("data-right")
-                .removeAttr("data-bottom")
-                .removeAttr("data-left")
-                .parent()
-                .addClass("shape-mockup-wrap");
+
+            // Work With slider
+            if (opt.sliderTab) {
+                var slider = $menu.data("asnavfor"); // select slider
+
+                // Select All button and set attribute
+                var i = 0;
+                $button.each(function () {
+                    var slideBtn = $(this);
+                    slideBtn.attr("data-slide-go-to", i);
+                    i++;
+
+                    // Active Slide On load > Actived Button
+                    if (slideBtn.hasClass("active")) {
+                        $(slider).slick(
+                            "slickGoTo",
+                            slideBtn.data("slide-go-to")
+                        );
+                    }
+
+                    // Change Indicator On slide Change
+                    $(slider).on(
+                        "beforeChange",
+                        function (event, slick, currentSlide, nextSlide) {
+                            $menu
+                                .find(
+                                    opt.tabButton +
+                                    '[data-slide-go-to="' +
+                                    nextSlide +
+                                    '"]'
+                                )
+                                .addClass("active")
+                                .siblings()
+                                .removeClass("active");
+                            linePos();
+                        }
+                    );
+                });
+            }
+
+            // Indicator Position
+            function linePos() {
+                var $btnActive = $menu.find(opt.tabButton + ".active"),
+                    $height = $btnActive.css("height"),
+                    $width = $btnActive.css("width"),
+                    $top = $btnActive.position().top + "px",
+                    $left = $btnActive.position().left + "px";
+
+                $line.get(0).style.setProperty("--height-set", $height);
+                $line.get(0).style.setProperty("--width-set", $width);
+                $line.get(0).style.setProperty("--pos-y", $top);
+                $line.get(0).style.setProperty("--pos-x", $left);
+
+                if (
+                    $($button).first().position().left ==
+                    $btnActive.position().left
+                ) {
+                    $line
+                        .addClass("start")
+                        .removeClass("center")
+                        .removeClass("end");
+                } else if (
+                    $($button).last().position().left ==
+                    $btnActive.position().left
+                ) {
+                    $line
+                        .addClass("end")
+                        .removeClass("center")
+                        .removeClass("start");
+                } else {
+                    $line
+                        .addClass("center")
+                        .removeClass("start")
+                        .removeClass("end");
+                }
+            }
+            linePos();
         });
     };
+
+
+
+    // Call On Load
+    if ($('.testi-box-tab').length) {
+        $('.testi-box-tab').asTab({
+            sliderTab: true,
+            tabButton: '.tab-btn'
+        });
+    }
+
+
+
+
+    if ($(".hero-indicator").length) {
+        $(".hero-indicator").asTab({
+            sliderTab: true,
+            tabButton: ".indicatior-btn",
+        });
+    }
+    if ($(".hero-indicator3").length) {
+        $(".hero-indicator3").asTab({
+            sliderTab: true,
+            tabButton: ".indicatior-btn",
+        });
+    }
+
+
+    ($.fn.vsTab = function (t) {
+        var a = $.extend({
+            sliderTab: !1,
+            tabButton: "button",
+            indicator: !1
+        }, t);
+        $(this).each(function () {
+            var t = $(this),
+                s = t.find(a.tabButton);
+            if (
+                (s.on("click", function (t) {
+                    t.preventDefault();
+                    var s = $(this);
+                    s.addClass("active").siblings().removeClass("active"), a.sliderTab && $(o).slick("slickGoTo", s.data("slide-go-to"));
+                }),
+                    a.sliderTab)
+            ) {
+                var o = t.data("asnavfor"),
+                    n = 0;
+                s.each(function () {
+                    var s = $(this);
+                    s.attr("data-slide-go-to", n),
+                        n++,
+                        s.hasClass("active") && $(o).slick("slickGoTo", s.data("slide-go-to")),
+                        $(o).on("beforeChange", function (e, s, o, n) {
+                            t.find(a.tabButton + '[data-slide-go-to="' + n + '"]')
+                                .addClass("active")
+                                .siblings()
+                                .removeClass("active");
+                        });
+                });
+            }
+        });
+    }),
+        $(".th-custom-dots").length && $(".th-custom-dots").vsTab({
+            sliderTab: !0,
+            tabButton: ".dot-btn"
+        }),
+        /*----------- 18. Shape Mockup ----------*/
+        $.fn.shapeMockup = function () {
+            var $shape = $(this);
+            $shape.each(function () {
+                var $currentShape = $(this),
+                    shapeTop = $currentShape.data("top"),
+                    shapeRight = $currentShape.data("right"),
+                    shapeBottom = $currentShape.data("bottom"),
+                    shapeLeft = $currentShape.data("left");
+                $currentShape
+                    .css({
+                        top: shapeTop,
+                        right: shapeRight,
+                        bottom: shapeBottom,
+                        left: shapeLeft,
+                    })
+                    .removeAttr("data-top")
+                    .removeAttr("data-right")
+                    .removeAttr("data-bottom")
+                    .removeAttr("data-left")
+                    .parent()
+                    .addClass("shape-mockup-wrap");
+            });
+        };
 
     if ($(".shape-mockup")) {
         $(".shape-mockup").shapeMockup();
@@ -1167,10 +1167,10 @@ popupSideMenu('.shopping-cart', '.sideMenuToggler2', '.sideMenuCls', 'show');
         dots: false,
         vertical: true,
         verticalSwiping: true,
-            
-        }); 
 
-        
+    });
+
+
     /*----------- 21. Price Slider ----------*/
     $(".price_slider").slider({
         range: true,
@@ -1188,14 +1188,14 @@ popupSideMenu('.shopping-cart', '.sideMenuToggler2', '.sideMenuCls', 'show');
 
 
 
-   /*----------- 21. image Slider ----------*/ 
-    $("#slider").on("input change", (e)=>{
+    /*----------- 21. image Slider ----------*/
+    $("#slider").on("input change", (e) => {
         const sliderPos = e.target.value;
         // Update the width of the foreground image
-        $('.foreground-img').css('width', `${sliderPos}%`)    
+        $('.foreground-img').css('width', `${sliderPos}%`)
         // Update the position of the slider button
-        $('.slider-button').css('left', `calc(${sliderPos}% - 18px)`) 
-      });
+        $('.slider-button').css('left', `calc(${sliderPos}% - 18px)`)
+    });
 
     /* ----------------------------  */
     // skill 
@@ -1211,7 +1211,7 @@ popupSideMenu('.shopping-cart', '.sideMenuToggler2', '.sideMenuCls', 'show');
 
             $(this).find('.progress-number-mark').animate({
                 left: $(this).attr('data-percentage')
-            }, { 
+            }, {
                 duration: 2000,
                 step: function (now, fx) {
                     var data = Math.round(now);
@@ -1277,16 +1277,16 @@ popupSideMenu('.shopping-cart', '.sideMenuToggler2', '.sideMenuCls', 'show');
     };
 
     // Call On Load
-    if ($(".indicator-active").length) { 
+    if ($(".indicator-active").length) {
         $(".indicator-active").indicator();
     }
 
 
     /* ==================================================
 #  Load More 
-===============================================*/  
+===============================================*/
 
-$(function () {   
+    $(function () {
         $(".project-sec").slice(0, 4).show();
         $("#loadMore").on("click", function (e) {
             e.preventDefault();
@@ -1373,7 +1373,7 @@ $(function () {
         });
     });
 
-   
+
 
     /*----------- 00. Right Click Disable ----------*/
     //   window.addEventListener('contextmenu', function (e) { 

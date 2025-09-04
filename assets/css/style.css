@@ -2140,7 +2140,7 @@ textarea.is-invalid {
   cursor: pointer;
   display: block;
   border-radius: 50px;
-  z-index: 10000;
+  z-index: 998;
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateY(45px);
@@ -2193,7 +2193,7 @@ textarea.is-invalid {
   cursor: pointer;
   display: block;
   border-radius: 50px;
-  z-index: 10000;
+  z-index: 998;
   opacity: 1;
   visibility: hidden;
   -webkit-transform: translateY(45px);
