@@ -22548,6 +22548,11 @@ span.select2-selection.select2-selection--single:focus {
 
 .gallery-row {
   --bs-gutter-y: 1.9rem;
+  row-gap: 3rem;
+}
+
+.service-row{
+  row-gap: 4rem;
 }
 
 .gallery-wrapper.style2 {
