@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ✅ Skip rewrite if file or directory exists
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # ✅ Optional: Remove .html extension from URLs
+  RewriteCond %{THE_REQUEST} \s([^.]+)\.html [NC]
+  RewriteRule ^ %1 [R=301,L]
+
+  # ✅ Optional: Internally add .html if no extension but file exists
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)/?$ $1.html [L]
+
+  # ✅ Fallback to index.php for unmatched routes
+  RewriteRule ^ index.html [L]
+
+  # ✅ Custom 404 error
+  ErrorDocument 404 /error.html
+</IfModule>
